@@ -12,8 +12,22 @@ console.log('its working');
 (d) Away Team goals for 2014 world cup final
 (e) Winner of 2014 world cup final */
 
+let year = (fifaData[fifaData.length-1]);
+console.log (year["Home Team Name"]);
+console.log (year["Away Team Name"]);
+console.log (year["Home Team Goals"]);
+console.log (year["Away Team Goals"]);
+
+    if(year["Home Team Goals"] > year["Away Team Goals"]){
+        console.log(`The ${year["Home Team Name"]} team won`);
+    } else {
+        console.log(`The ${year["Away Team Name"]} team won`);
+    }
+
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
+
+// I think this is going to be filter, because you are filtering out everything that is false, that fails your truth test.
 
 function getFinals(/* code here */) {
 
@@ -23,7 +37,7 @@ function getFinals(/* code here */) {
 
 /* Task 3: Implement a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
 
-function getYears(/* code here */) {
+function getYears(getFinals /*the creation of task 2*/ ) {
 
     /* code here */
 
@@ -56,13 +70,52 @@ getWinnersByYear();
 
 /* Task 6: Write a function called `getAverageGoals` that accepts a parameter `data` and returns the the average number of home team goals and away team goals scored per match (Hint: use .reduce and do this in 2 steps) */
 
-function getAverageGoals(/* code here */) {
+function getAverageGoals(/* code here */) { //I think this will be reduce since we are taking lots of data and reducing it to a single variable which is the average.
 
     /* code here */
 
 };
 
 getAverageGoals();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /// STRETCH 🥅 //
 
